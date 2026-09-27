@@ -620,3 +620,109 @@ a {
     background-color: var(--cor-card);
     color: var(--cor-texto);
 }
+
+/* ========================================
+   BLOCO 7 — PROGRESSO
+   Responsabilidade: estilizar indicadores
+   de evolução e acompanhamento das tarefas
+======================================== */
+
+.card-progresso {
+    padding: 22px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+
+    background-color: var(--cor-superficie);
+}
+
+.progresso-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin-bottom: 20px;
+}
+
+.progresso-principal strong {
+    color: var(--cor-principal);
+
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.progresso-principal span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+}
+
+.resumo-progresso {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.indicador-progresso {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 14px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+
+    background-color: var(--cor-fundo);
+}
+
+.indicador-progresso span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 12px;
+}
+
+.indicador-progresso strong {
+    color: var(--cor-texto);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-motivacao {
+    position: relative;
+
+    padding: 22px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+
+    background-color: var(--cor-card);
+
+    overflow: hidden;
+}
+
+.card-motivacao .aspas {
+    position: absolute;
+
+    top: 2px;
+    right: 16px;
+
+    color: var(--cor-principal);
+
+    font-size: 54px;
+    font-weight: 700;
+
+    opacity: 0.35;
+}
+
+.card-motivacao p {
+    position: relative;
+
+    max-width: 270px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
