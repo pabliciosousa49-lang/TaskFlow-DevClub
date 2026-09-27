@@ -1,16 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TaskFlow DevClub - gerenciamento de tarefas de estudo.">
+
   <title>TaskFlow | DevClub</title>
+
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <!-- Fase 1: a estrutura visual será construída em blocos e commitada por responsabilidade. -->
-  <div id="app"></div>
 
-  <script type="module" src="./js/app.js"></script>
+<body>
+  <!-- Estrutura principal — Layout - organizar as áreas da aplicação -->
+  <div class="app">
+
+
+    <!-- Menu lateral — Navegação - estruturar navegação principal do DevClub -->
+    <aside class="menu-lateral">
+
+      <div class="menu-topo">
+
+        <!-- Identidade DevClub — Navegação - reservar espaço para logo da plataforma -->
+        <div class="logo-devclub">
+
+          <!-- Adicione posteriormente sua imagem em frontend/img/ -->
+          <img src="" alt="Logo DevClub">
+
+        </div>
+
+        <button class="botao-recolher-menu" type="button">
+          &lt;&lt;
+        </button>
+
+      </div>
+
+
+      <!-- Pesquisa lateral — Navegação - disponibilizar campo visual de pesquisa -->
+      <div class="pesquisa-menu">
+
+        <input type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+
+      </div>
+
+
+      <!-- Links principais — Navegação - organizar acessos da plataforma -->
+      <nav class="navegacao-principal">
+
+        <a href="#" class="item-menu">
+          <span>Home Dev Club</span>
+        </a>
+
+        <a href="#" class="item-menu item-menu-ativo">
+          <span>TaskFlow</span>
+        </a>
+
+        <a href="#" class="item-menu">
+          <span>Hostinger</span>
+        </a>
+
+        <a href="#" class="item-menu">
+          <span>DevClub Full Stack</span>
+        </a>
+
+        <a href="#" class="item-menu">
+          <span>Data Club</span>
+        </a>
+
+        <a href="#" class="item-menu">
+          <span>Front End Club</span>
+        </a>
+
+        <a href="#" class="item-menu">
+          <span>Gestor de IA</span>
+        </a>
+
+        <a href="#" class="item-menu">
+          <span>DevClub ELITE</span>
+        </a>
+
+        <a href="#" class="item-menu">
+          <span>Suporte Humano</span>
+        </a>
+
+      </nav>
+  </div>
+
 </body>
+
 </html>
