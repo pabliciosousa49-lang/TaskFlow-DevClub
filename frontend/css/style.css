@@ -396,3 +396,72 @@ a {
 .grupo-pesquisa select:focus {
     border-color: var(--cor-principal);
 }
+
+/* ========================================
+   BLOCO 5 — PAINEL DE TAREFAS
+   Responsabilidade: organizar e estilizar
+   as áreas de listagem das tarefas
+======================================== */
+
+.area-trabalho {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 24px;
+
+    align-items: start;
+}
+
+.painel-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.grupo-tarefas {
+    padding: 20px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+
+    background-color: var(--cor-superficie);
+}
+
+.titulo-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.titulo-grupo > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-grupo h2 {
+    color: var(--cor-texto);
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.titulo-grupo span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 12px;
+}
+
+.lista-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    min-height: 70px;
+
+    border-radius: var(--raio-medio);
+}
