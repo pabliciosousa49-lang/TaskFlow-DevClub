@@ -99,6 +99,99 @@
         <span>Aluno DevClub</span>
     </div>
 
+    <!-- Cabeçalho TaskFlow — Apresentação - identificar área de gerenciamento de estudos -->
+<header class="cabecalho-taskflow">
+
+    <div class="cabecalho-texto">
+
+        <span class="identificador-pagina">
+            TASKFLOW
+        </span>
+
+        <h1>Organize seu aprendizado.</h1>
+
+        <p>
+            Planeje seus estudos, acompanhe suas tarefas
+            e mantenha sua evolução em movimento.
+        </p>
+
+    </div>
+
+    <div class="cabecalho-imagem">
+
+        <!-- Adicione posteriormente uma imagem em frontend/img/ -->
+        <img src="" alt="Ilustração TaskFlow">
+
+    </div>
+
+</header>
+
+
+<!-- Barra de ferramentas — Filtros - disponibilizar controles da lista de tarefas -->
+<section class="barra-ferramentas">
+
+    <div class="grupo-filtros">
+
+        <button
+            id="filtro-todas"
+            class="botao-filtro ativo"
+            type="button"
+        >
+            Todas
+        </button>
+
+        <button
+            id="filtro-hoje"
+            class="botao-filtro"
+            type="button"
+        >
+            Hoje
+        </button>
+
+        <button
+            id="filtro-proximas"
+            class="botao-filtro"
+            type="button"
+        >
+            Próximas
+        </button>
+
+        <button
+            id="filtro-concluidas"
+            class="botao-filtro"
+            type="button"
+        >
+            Concluídas
+        </button>
+
+    </div>
+
+
+    <div class="grupo-pesquisa">
+
+        <input
+            id="pesquisa-tarefa"
+            type="search"
+            placeholder="Buscar tarefa..."
+        >
+
+        <select id="ordenar-tarefas">
+
+            <option value="recentes">
+                Mais recentes
+            </option>
+
+            <option value="prazo">
+                Prazo
+            </option>
+
+            <option value="prioridade">
+                Prioridade
+            </option>
+
+        </select>
+
+    </div>
 
   </div>
   <script src="./js/app.js"></script>
