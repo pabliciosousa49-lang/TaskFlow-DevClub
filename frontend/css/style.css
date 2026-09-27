@@ -66,3 +66,165 @@ a {
     min-height: 100vh;
 }
 
+/* ========================================
+   BLOCO 2 — MENU LATERAL
+   Responsabilidade: estilizar a navegação
+======================================== */
+
+.menu-lateral {
+    width: var(--menu-largura);
+    min-height: 100vh;
+    padding: 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--cor-superficie);
+    border-right: 1px solid var(--cor-borda);
+}
+
+.menu-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 48px;
+    margin-bottom: 24px;
+}
+
+.logo-devclub {
+    display: flex;
+    align-items: center;
+}
+
+.logo-devclub img {
+    max-width: 130px;
+    max-height: 40px;
+    object-fit: contain;
+}
+
+.botao-recolher-menu {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+
+    background-color: transparent;
+    color: var(--cor-texto-secundario);
+
+    transition: 0.2s;
+}
+
+.botao-recolher-menu:hover {
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+}
+
+.pesquisa-menu {
+    margin-bottom: 24px;
+}
+
+.pesquisa-menu input {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    outline: none;
+}
+
+.pesquisa-menu input::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+.pesquisa-menu input:focus {
+    border-color: var(--cor-principal);
+}
+
+.navegacao-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+
+    min-height: 42px;
+    padding: 0 12px;
+
+    border-radius: var(--raio-medio);
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.item-menu:hover {
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+}
+
+.item-menu-ativo {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+}
+
+.item-menu-ativo:hover {
+    background-color: var(--cor-principal-hover);
+    color: #ffffff;
+}
+
+.perfil-aluno {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--cor-borda);
+}
+
+.foto-perfil {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background-color: var(--cor-card);
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dados-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.dados-perfil strong {
+    color: var(--cor-texto);
+    font-size: 14px;
+}
+
+.dados-perfil span {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+}
