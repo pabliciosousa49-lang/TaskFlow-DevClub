@@ -1,1 +1,68 @@
-/* TaskFlow DevClub — estilos serão adicionados por blocos durante a Fase 1: Interface. */
+/* ========================================
+   BLOCO 1 — CONFIGURAÇÕES GERAIS
+   Responsabilidade: definir a base visual
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #080808;
+    --cor-superficie: #111111;
+    --cor-card: #171717;
+    --cor-borda: #292929;
+
+    --cor-principal: #7c3aed;
+    --cor-principal-hover: #8b5cf6;
+
+    --cor-texto: #f5f5f5;
+    --cor-texto-secundario: #a3a3a3;
+
+    --cor-sucesso: #22c55e;
+    --cor-alerta: #f59e0b;
+    --cor-erro: #ef4444;
+
+    --raio-pequeno: 6px;
+    --raio-medio: 10px;
+    --raio-grande: 16px;
+
+    --menu-largura: 250px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
