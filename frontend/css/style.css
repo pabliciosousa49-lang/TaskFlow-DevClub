@@ -228,3 +228,83 @@ a {
     color: var(--cor-texto-secundario);
     font-size: 12px;
 }
+
+/* ========================================
+   BLOCO 3 — CABEÇALHO TASKFLOW
+   Responsabilidade: estilizar a apresentação
+======================================== */
+
+.conteudo-principal {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+
+    background-color: var(--cor-fundo);
+}
+
+.cabecalho-taskflow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    min-height: 180px;
+    padding: 32px;
+    margin-bottom: 24px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+
+    background-color: var(--cor-superficie);
+}
+
+.cabecalho-texto {
+    max-width: 650px;
+}
+
+.identificador-pagina {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--cor-principal);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cabecalho-texto h1 {
+    margin-bottom: 12px;
+
+    color: var(--cor-texto);
+
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.cabecalho-texto p {
+    max-width: 580px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.cabecalho-imagem {
+    width: 220px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.cabecalho-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
