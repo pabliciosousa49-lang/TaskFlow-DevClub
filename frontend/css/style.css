@@ -465,3 +465,158 @@ a {
 
     border-radius: var(--raio-medio);
 }
+
+/* ========================================
+   BLOCO 6 — FORMULÁRIO DE TAREFAS
+   Responsabilidade: estilizar o cadastro
+   e edição das tarefas
+======================================== */
+
+.painel-lateral-taskflow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-nova-tarefa {
+    padding: 22px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+
+    background-color: var(--cor-superficie);
+}
+
+.titulo-card {
+    margin-bottom: 20px;
+}
+
+.card-identificador {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--cor-principal);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.titulo-card h2 {
+    color: var(--cor-texto);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#form-tarefa {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    flex: 1;
+}
+
+.campo-formulario label {
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo-formulario input,
+.campo-formulario select {
+    height: 42px;
+    padding: 0 12px;
+}
+
+.campo-formulario textarea {
+    min-height: 90px;
+    padding: 12px;
+
+    resize: vertical;
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--cor-principal);
+}
+
+.linha-formulario {
+    display: flex;
+    gap: 12px;
+}
+
+.acoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 4px;
+}
+
+.botao-principal,
+.botao-secundario {
+    min-height: 40px;
+    padding: 0 16px;
+
+    border-radius: var(--raio-medio);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.botao-principal {
+    border: 1px solid var(--cor-principal);
+
+    background-color: var(--cor-principal);
+    color: #ffffff;
+}
+
+.botao-principal:hover {
+    background-color: var(--cor-principal-hover);
+    border-color: var(--cor-principal-hover);
+}
+
+.botao-secundario {
+    border: 1px solid var(--cor-borda);
+
+    background-color: transparent;
+    color: var(--cor-texto-secundario);
+}
+
+.botao-secundario:hover {
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+}
