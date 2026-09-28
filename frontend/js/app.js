@@ -9,18 +9,16 @@ const topicosTaskFlow = document.querySelectorAll(".topico-taskflow");
 
 // Distribuição dos tópicos — Processamento - calcular a posição de cada tópico no círculo
 const raio = 300;
-
 topicosTaskFlow.forEach(function (topico, indice) {
 
     const angulo = (360 / topicosTaskFlow.length) * indice;
-
     const anguloRadianos = angulo * (Math.PI / 180);
 
     const posicaoX = Math.cos(anguloRadianos) * raio;
     const posicaoY = Math.sin(anguloRadianos) * raio;
 
-    console.log(indice, posicaoX, posicaoY);
-
+    // Posição visual — Atualização - aplicar as coordenadas calculadas ao tópico
+    topico.style.transform = `translate(-50%, -50%) translate(${posicaoX}px, ${posicaoY}px)`;
 });
 
 // Abertura do TaskFlow — Escuta - identificar clique no acesso ao TaskFlow
