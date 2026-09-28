@@ -1,16 +1,20 @@
 // Elementos da navegação — Seleção - localizar controles e views da aplicação
-
 const botaoHome = document.querySelector("#abrir-home");
 const botaoTaskFlow = document.querySelector("#abrir-taskflow");
-
 const viewHome = document.querySelector("#view-home");
 const viewTaskFlow = document.querySelector("#view-taskflow");
 
 // Tópicos do TaskFlow — Seleção - localizar todos os tópicos disponíveis
 const topicosTaskFlow = document.querySelectorAll(".topico-taskflow");
 
-// Abertura do TaskFlow — Escuta - identificar clique no acesso ao TaskFlow
+// Percorrer tópicos — Processamento - identificar cada tópico e sua posição na lista
+topicosTaskFlow.forEach(function (topico, indice) {
 
+    console.log(indice, topico);
+
+});
+
+// Abertura do TaskFlow — Escuta - identificar clique no acesso ao TaskFlow
 botaoTaskFlow.addEventListener("click", function (event) {
 
     event.preventDefault();
