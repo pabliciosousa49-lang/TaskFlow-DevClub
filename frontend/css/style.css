@@ -319,12 +319,10 @@ a {
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at center,
+        radial-gradient(circle at center,
             rgba(124, 58, 237, 0.12) 0%,
             rgba(124, 58, 237, 0.04) 30%,
-            transparent 60%
-        ),
+            transparent 60%),
         var(--cor-fundo);
 }
 
@@ -446,11 +444,9 @@ a {
     border-radius: 50%;
 
     background:
-        radial-gradient(
-            circle,
+        radial-gradient(circle,
             rgba(124, 58, 237, 0.35),
-            rgba(17, 17, 17, 0.95) 70%
-        );
+            rgba(17, 17, 17, 0.95) 70%);
 
     box-shadow:
         0 0 40px rgba(124, 58, 237, 0.18);
@@ -500,11 +496,11 @@ a {
     transform: translate(-50%, -50%);
 
     transition:
-    transform 0.6s ease,
-    opacity 0.6s ease,
-    border-color 0.25s ease,
-    background-color 0.25s ease,
-    box-shadow 0.25s ease;
+        transform 0.6s ease,
+        opacity 0.6s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
 
     z-index: 3;
 }
@@ -527,12 +523,20 @@ a {
 
 /* Ícone temporário */
 .topico-icone {
-    color: var(--cor-principal);
-
-    font-size: 12px;
+    font-size: 30px;
     font-weight: 700;
+    color: var(--cor-sucesso);
 }
 
+/* Ícones de carreira — Apresentação - diferenciar conteúdos profissionais */
+
+.icone-linkedin {
+    color: #0a66c2;
+}
+
+.icone-carreira {
+    color: var(--cor-sucesso);
+}
 
 /* Nome da tecnologia */
 .topico-nome {
