@@ -499,9 +499,11 @@ a {
     transform: translate(-50%, -50%);
 
     transition:
-        border-color 0.2s,
-        background-color 0.2s,
-        box-shadow 0.2s;
+    transform 0.6s ease,
+    opacity 0.6s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 
     z-index: 3;
 }
