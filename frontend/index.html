@@ -99,418 +99,239 @@
     </aside>
 
 
-    <!-- Conteúdo principal — Layout - agrupar funcionalidades do TaskFlow -->
+    <!-- Conteúdo principal — Layout - controlar as diferentes views da aplicação -->
     <main class="conteudo-principal">
 
-      <!-- Cabeçalho TaskFlow — Apresentação - apresentar continuidade da jornada de estudos -->
-      <header class="cabecalho-taskflow">
 
-        <div class="cabecalho-texto">
+      <!-- ========================================
+         VIEW HOME
+    ========================================= -->
 
-          <span class="identificador-pagina">
-            TASKFLOW
-          </span>
+      <!-- Home — Apresentação - representar página inicial da plataforma -->
+      <section id="view-home" class="view view-ativa">
 
-          <h1>Continue evoluindo nos seus estudos.</h1>
+        <!-- Banner principal — Apresentação - reproduzir área visual da Home -->
+        <div class="banner-home">
 
-          <p>
-            Organize revisões, práticas e próximos conteúdos
-            da sua jornada de aprendizado.
-          </p>
-
-        </div>
-
-        <div class="cabecalho-imagem">
-
-          <img src="./img/cabeçalhotask.png" alt="Ilustração de organização de estudos">
-
-        </div>
-
-      </header>
-
-
-      <!-- Barra de ferramentas — Filtros - disponibilizar controles da lista de tarefas -->
-      <section class="barra-ferramentas">
-
-        <div class="grupo-filtros">
-
-          <button id="filtro-todas" class="botao-filtro ativo" type="button">
-            Todas
-          </button>
-
-          <button id="filtro-revisoes" class="botao-filtro" type="button">
-            Revisões
-          </button>
-
-          <button id="filtro-praticas" class="botao-filtro" type="button">
-            Práticas
-          </button>
-
-          <button id="filtro-estudos" class="botao-filtro" type="button">
-            Estudos
-          </button>
-
-          <button id="filtro-concluidas" class="botao-filtro" type="button">
-            Concluídas
-          </button>
-
-        </div>
-
-        <div class="grupo-pesquisa">
-
-          <input id="pesquisa-tarefa" type="search" placeholder="Buscar tarefa...">
-
-          <select id="ordenar-tarefas">
-
-            <option value="recentes">
-              Mais recentes
-            </option>
-
-            <option value="prazo">
-              Prazo
-            </option>
-
-            <option value="prioridade">
-              Prioridade
-            </option>
-
-          </select>
+          <img src="./img/banner-home.png" alt="Banner principal DevClub">
 
         </div>
 
       </section>
 
 
-      <!-- Área de trabalho — Layout - dividir tarefas e formulário -->
-      <div class="area-trabalho">
 
-        <!-- Painel de tarefas — Listagem - organizar tarefas cadastradas -->
-        <section class="painel-tarefas">
+      <!-- ========================================
+         VIEW TASKFLOW
+    ========================================= -->
 
-          <!-- Tarefas de hoje — Listagem - exibir atividades planejadas para o dia -->
-          <section class="grupo-tarefas">
+      <!-- TaskFlow — Navegação - disponibilizar seleção dos conteúdos de estudo -->
+      <section id="view-taskflow" class="view">
 
-            <div class="titulo-grupo">
+        <div class="taskflow-container">
 
-              <div>
-                <h2>Hoje</h2>
 
-                <span id="contador-hoje">
-                  0 tarefas
-                </span>
-              </div>
+          <!-- Apresentação TaskFlow — Apresentação - orientar seleção de conteúdo -->
+          <header class="taskflow-cabecalho">
 
-              <span id="data-atual"></span>
-
-            </div>
-
-            <div id="lista-hoje" class="lista-tarefas">
-              <!-- As tarefas serão inseridas pelo JavaScript -->
-            </div>
-
-          </section>
-
-
-          <!-- Próximos estudos — Listagem - exibir tarefas futuras -->
-          <section class="grupo-tarefas">
-
-            <div class="titulo-grupo">
-
-              <div>
-                <h2>Próximos Estudos</h2>
-
-                <span id="contador-proximas">
-                  0 tarefas
-                </span>
-              </div>
-
-            </div>
-
-            <div id="lista-proximas" class="lista-tarefas">
-              <!-- As tarefas serão inseridas pelo JavaScript -->
-            </div>
-
-          </section>
-
-
-          <!-- Tarefas concluídas — Listagem - exibir histórico de atividades finalizadas -->
-          <section class="grupo-tarefas">
-
-            <div class="titulo-grupo">
-
-              <div>
-                <h2>Concluídas</h2>
-
-                <span id="contador-concluidas">
-                  0 tarefas
-                </span>
-              </div>
-
-            </div>
-
-            <div id="lista-concluidas" class="lista-tarefas">
-              <!-- As tarefas serão inseridas pelo JavaScript -->
-            </div>
-
-          </section>
-
-        </section>
-
-
-        <!-- Painel lateral — Layout - agrupar cadastro e acompanhamento -->
-        <aside class="painel-lateral-taskflow">
-
-          <!-- Planejamento de estudo — Cadastro - organizar continuidade do aprendizado -->
-          <section class="card-nova-tarefa">
-
-            <div class="titulo-card">
-
-              <div>
-
-                <span class="card-identificador">
-                  PLANEJAMENTO
-                </span>
-
-                <h2>Planejar Estudo</h2>
-
-              </div>
-
-            </div>
-
-            <form id="form-tarefa">
-
-              <!-- Trilha — Cadastro - identificar área principal de aprendizado -->
-              <div class="campo-formulario">
-
-                <label for="trilha-tarefa">
-                  Trilha
-                </label>
-
-                <select id="trilha-tarefa" name="trilha" required>
-
-                  <option value="">
-                    Selecione uma trilha
-                  </option>
-
-                  <option value="frontend">
-                    Front-end
-                  </option>
-
-                  <option value="backend">
-                    Back-end
-                  </option>
-
-                  <option value="mobile">
-                    Mobile
-                  </option>
-
-                  <option value="carreira">
-                    Carreira
-                  </option>
-
-                </select>
-
-              </div>
-
-
-              <!-- Tecnologia — Cadastro - identificar conteúdo estudado -->
-              <div class="campo-formulario">
-
-                <label for="tecnologia-tarefa">
-                  Tecnologia
-                </label>
-
-                <select id="tecnologia-tarefa" name="tecnologia" required>
-
-                  <option value="">
-                    Selecione primeiro uma trilha
-                  </option>
-
-                </select>
-
-              </div>
-
-
-              <!-- Módulo — Cadastro - registrar módulo específico estudado -->
-              <div class="campo-formulario">
-
-                <label for="modulo-tarefa">
-                  Módulo
-                </label>
-
-                <input id="modulo-tarefa" name="modulo" type="text" placeholder="Ex: Arrays" required>
-
-              </div>
-
-
-              <!-- Atividade — Cadastro - definir próxima ação de aprendizagem -->
-              <div class="campo-formulario">
-
-                <label for="atividade-tarefa">
-                  Atividade
-                </label>
-
-                <select id="atividade-tarefa" name="atividade" required>
-
-                  <option value="">
-                    Selecione
-                  </option>
-
-                  <option value="estudo">
-                    Estudo
-                  </option>
-
-                  <option value="revisao">
-                    Revisão
-                  </option>
-
-                  <option value="pratica">
-                    Prática
-                  </option>
-
-                </select>
-
-              </div>
-
-
-              <!-- Descrição — Cadastro - detalhar ação planejada -->
-              <div class="campo-formulario">
-
-                <label for="descricao-tarefa">
-                  Descrição
-                </label>
-
-                <textarea id="descricao-tarefa" name="descricao"
-                  placeholder="Ex: Revisar resumo e praticar métodos de array"></textarea>
-
-              </div>
-
-
-              <!-- Prazo — Cadastro - definir quando a atividade será realizada -->
-              <div class="campo-formulario">
-
-                <label for="prazo-tarefa">
-                  Prazo
-                </label>
-
-                <input id="prazo-tarefa" name="prazo" type="date" required>
-
-              </div>
-
-
-              <!-- Ações do formulário — Cadastro - controlar planejamento -->
-              <div class="acoes-formulario">
-
-                <button id="cancelar-tarefa" class="botao-secundario" type="button">
-                  Cancelar
-                </button>
-
-                <button id="salvar-tarefa" class="botao-principal" type="submit">
-                  Adicionar Tarefa
-                </button>
-
-              </div>
-
-            </form>
-
-          </section>
-
-
-          <!-- Progresso das tarefas — Indicadores - apresentar evolução calculada pelo JavaScript -->
-          <section class="card-progresso">
-
-            <div class="titulo-card">
-
-              <div>
-
-                <span class="card-identificador">
-                  EVOLUÇÃO
-                </span>
-
-                <h2>Meu Progresso</h2>
-
-              </div>
-
-            </div>
-
-
-            <div class="progresso-principal">
-
-              <strong id="porcentagem-progresso">
-                0%
-              </strong>
-
-              <span>
-                das tarefas concluídas
-              </span>
-
-            </div>
-
-            <!-- Resumo de progresso — Indicadores - acompanhar atividades de aprendizado -->
-            <div class="resumo-progresso">
-
-              <div class="indicador-progresso">
-
-                <span>Estudos</span>
-
-                <strong id="total-estudos">
-                  0
-                </strong>
-
-              </div>
-
-              <div class="indicador-progresso">
-
-                <span>Revisões</span>
-
-                <strong id="total-revisoes">
-                  0
-                </strong>
-
-              </div>
-
-              <div class="indicador-progresso">
-
-                <span>Práticas</span>
-
-                <strong id="total-praticas">
-                  0
-                </strong>
-
-              </div>
-
-              <div class="indicador-progresso">
-
-                <span>Concluídas</span>
-
-                <strong id="total-concluidas">
-                  0
-                </strong>
-
-              </div>
-
-            </div>
-
-          </section>
-
-
-          <!-- Mensagem de estudo — Apresentação - reforçar identidade visual do TaskFlow -->
-          <section class="card-motivacao">
-
-            <span class="aspas">
-              “
+            <span class="taskflow-identificador">
+              TASKFLOW
             </span>
 
+            <h1>
+              O que você está estudando?
+            </h1>
+
             <p>
-              Pequenas ações diárias constroem
-              grandes resultados.
+              Escolha um tópico para continuar sua jornada.
             </p>
 
-          </section>
+          </header>
 
-        </aside>
 
-      </div>
+
+          <!-- Órbita TaskFlow — Layout - organizar tópicos ao redor do elemento central -->
+          <div class="taskflow-orbita">
+
+
+            <!-- Centro TaskFlow — Identidade - representar núcleo da experiência -->
+            <div class="taskflow-centro">
+
+              <span>TaskFlow</span>
+
+            </div>
+
+
+
+            <!-- ========================================
+                     FRONT END
+                ========================================= -->
+
+            <!-- Front End — Seleção - disponibilizar conteúdos de desenvolvimento front-end -->
+
+            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="html">
+              <span class="topico-icone">HTML</span>
+              <span class="topico-nome">HTML</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="css">
+              <span class="topico-icone">CSS</span>
+              <span class="topico-nome">CSS</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+              data-topico="javascript">
+              <span class="topico-icone">JS</span>
+              <span class="topico-nome">JavaScript</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+              data-topico="typescript">
+              <span class="topico-icone">TS</span>
+              <span class="topico-nome">TypeScript</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="react">
+              <span class="topico-icone">React</span>
+              <span class="topico-nome">React</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="vite">
+              <span class="topico-icone">Vite</span>
+              <span class="topico-nome">Vite</span>
+            </button>
+
+
+
+            <!-- ========================================
+                     BACK END
+                ========================================= -->
+
+            <!-- Back End — Seleção - disponibilizar conteúdos de desenvolvimento back-end -->
+
+            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="node">
+              <span class="topico-icone">Node</span>
+              <span class="topico-nome">Node</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="express">
+              <span class="topico-icone">Express</span>
+              <span class="topico-nome">Express</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="fastify">
+              <span class="topico-icone">Fastify</span>
+              <span class="topico-nome">Fastify</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="prisma">
+              <span class="topico-icone">Prisma</span>
+              <span class="topico-nome">Prisma</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+              data-topico="postgres">
+              <span class="topico-icone">Postgres</span>
+              <span class="topico-nome">Postgres</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="mongodb">
+              <span class="topico-icone">MongoDB</span>
+              <span class="topico-nome">MongoDB</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="docker">
+              <span class="topico-icone">Docker</span>
+              <span class="topico-nome">Docker</span>
+            </button>
+
+
+
+            <!-- ========================================
+                     MOBILE
+                ========================================= -->
+
+            <!-- Mobile — Seleção - disponibilizar conteúdos de desenvolvimento mobile -->
+
+            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile"
+              data-topico="react-native">
+              <span class="topico-icone">RN</span>
+              <span class="topico-nome">React Native</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile" data-topico="expo">
+              <span class="topico-icone">Expo</span>
+              <span class="topico-nome">Expo</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile" data-topico="android">
+              <span class="topico-icone">Android</span>
+              <span class="topico-nome">Android</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile" data-topico="ios">
+              <span class="topico-icone">iOS</span>
+              <span class="topico-nome">iOS</span>
+            </button>
+
+
+
+            <!-- ========================================
+                     CARREIRA
+                ========================================= -->
+
+            <!-- Carreira — Seleção - disponibilizar conteúdos de desenvolvimento profissional -->
+
+            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+              data-topico="linkedin">
+              <span class="topico-icone">in</span>
+              <span class="topico-nome">LinkedIn</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+              data-topico="curriculo">
+              <span class="topico-icone">CV</span>
+              <span class="topico-nome">Currículo</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+              data-topico="entrevistas">
+              <span class="topico-icone">ENT</span>
+              <span class="topico-nome">Entrevistas</span>
+            </button>
+
+
+            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+              data-topico="processos-seletivos">
+              <span class="topico-icone">PS</span>
+
+              <span class="topico-nome">
+                Processos seletivos
+              </span>
+            </button>
+
+
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
 
