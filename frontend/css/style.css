@@ -291,3 +291,248 @@ a {
     object-fit: cover;
     object-position: center;
 }
+
+
+/* ========================================
+   BLOCO 4 — AMBIENTE TASKFLOW
+   Responsabilidade: construir a área visual
+   de seleção dos tópicos
+======================================== */
+
+#view-taskflow {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* Container principal do TaskFlow */
+.taskflow-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(124, 58, 237, 0.12) 0%,
+            rgba(124, 58, 237, 0.04) 30%,
+            transparent 60%
+        ),
+        var(--cor-fundo);
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.taskflow-cabecalho {
+    width: 100%;
+    max-width: 900px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.taskflow-identificador {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--cor-principal);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+.taskflow-cabecalho h1 {
+    margin-bottom: 10px;
+
+    color: var(--cor-texto);
+
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+
+.taskflow-cabecalho p {
+    color: var(--cor-texto-secundario);
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   ÓRBITA
+======================================== */
+
+.taskflow-orbita {
+    position: relative;
+
+    width: min(760px, 75vw);
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+}
+
+
+/* Círculo visual de referência */
+.taskflow-orbita::before {
+    content: "";
+
+    position: absolute;
+
+    width: 72%;
+    height: 72%;
+
+    border: 1px solid rgba(124, 58, 237, 0.22);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Segundo círculo decorativo */
+.taskflow-orbita::after {
+    content: "";
+
+    position: absolute;
+
+    width: 48%;
+    height: 48%;
+
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CENTRO DO TASKFLOW
+======================================== */
+
+.taskflow-centro {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(139, 92, 246, 0.7);
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.35),
+            rgba(17, 17, 17, 0.95) 70%
+        );
+
+    box-shadow:
+        0 0 40px rgba(124, 58, 237, 0.18);
+
+    z-index: 2;
+}
+
+
+.taskflow-centro span {
+    color: var(--cor-texto);
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   BOTÕES DOS TÓPICOS
+======================================== */
+
+.topico-taskflow {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 105px;
+    min-height: 76px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+
+    background-color: rgba(23, 23, 23, 0.96);
+    color: var(--cor-texto);
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        border-color 0.2s,
+        background-color 0.2s,
+        box-shadow 0.2s;
+
+    z-index: 3;
+}
+
+
+/* Interação visual */
+.topico-taskflow:hover {
+    border-color: var(--cor-principal);
+
+    background-color: var(--cor-superficie);
+
+    box-shadow:
+        0 0 24px rgba(124, 58, 237, 0.22);
+}
+
+
+/* Ícone temporário */
+.topico-icone {
+    color: var(--cor-principal);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Nome da tecnologia */
+.topico-nome {
+    color: var(--cor-texto);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+}
