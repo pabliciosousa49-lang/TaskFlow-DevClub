@@ -99,443 +99,415 @@
     <!-- Conteúdo principal — Layout - agrupar funcionalidades do TaskFlow -->
     <main class="conteudo-principal">
 
-        <!-- Cabeçalho TaskFlow — Apresentação - apresentar continuidade da jornada de estudos -->
-        <header class="cabecalho-taskflow">
+      <!-- Cabeçalho TaskFlow — Apresentação - apresentar continuidade da jornada de estudos -->
+      <header class="cabecalho-taskflow">
 
-          <div class="cabecalho-texto">
+        <div class="cabecalho-texto">
 
-            <span class="identificador-pagina">
-              TASKFLOW
-            </span>
+          <span class="identificador-pagina">
+            TASKFLOW
+          </span>
 
-            <h1>Continue evoluindo nos seus estudos.</h1>
+          <h1>Continue evoluindo nos seus estudos.</h1>
 
-            <p>
-              Organize revisões, práticas e próximos conteúdos
-              da sua jornada de aprendizado.
-            </p>
+          <p>
+            Organize revisões, práticas e próximos conteúdos
+            da sua jornada de aprendizado.
+          </p>
 
-          </div>
+        </div>
 
-          <div class="cabecalho-imagem">
+        <div class="cabecalho-imagem">
 
-            <img src="./img/cabeçalhotask.png" alt="Ilustração de organização de estudos">
+          <img src="./img/cabeçalhotask.png" alt="Ilustração de organização de estudos">
 
-          </div>
+        </div>
 
-        </header>
-
-
-        <!-- Barra de ferramentas — Filtros - disponibilizar controles da lista de tarefas -->
-        <section class="barra-ferramentas">
-
-          <div class="grupo-filtros">
-
-            <button id="filtro-todas" class="botao-filtro ativo" type="button">
-              Todas
-            </button>
-
-            <button id="filtro-hoje" class="botao-filtro" type="button">
-              Hoje
-            </button>
-
-            <button id="filtro-proximas" class="botao-filtro" type="button">
-              Próximas
-            </button>
-
-            <button id="filtro-concluidas" class="botao-filtro" type="button">
-              Concluídas
-            </button>
-
-          </div>
-
-          <div class="grupo-pesquisa">
-
-            <input id="pesquisa-tarefa" type="search" placeholder="Buscar tarefa...">
-
-            <select id="ordenar-tarefas">
-
-              <option value="recentes">
-                Mais recentes
-              </option>
-
-              <option value="prazo">
-                Prazo
-              </option>
-
-              <option value="prioridade">
-                Prioridade
-              </option>
-
-            </select>
-
-          </div>
-
-        </section>
+      </header>
 
 
-        <!-- Área de trabalho — Layout - dividir tarefas e formulário -->
-        <div class="area-trabalho">
+      <!-- Barra de ferramentas — Filtros - disponibilizar controles da lista de tarefas -->
+      <section class="barra-ferramentas">
 
-          <!-- Painel de tarefas — Listagem - organizar tarefas cadastradas -->
-          <section class="painel-tarefas">
+        <div class="grupo-filtros">
 
-            <!-- Tarefas de hoje — Listagem - exibir atividades planejadas para o dia -->
-            <section class="grupo-tarefas">
+          <button id="filtro-todas" class="botao-filtro ativo" type="button">
+            Todas
+          </button>
 
-              <div class="titulo-grupo">
+          <button id="filtro-revisoes" class="botao-filtro" type="button">
+            Revisões
+          </button>
 
-                <div>
-                  <h2>Hoje</h2>
+          <button id="filtro-praticas" class="botao-filtro" type="button">
+            Práticas
+          </button>
 
-                  <span id="contador-hoje">
-                    0 tarefas
-                  </span>
-                </div>
+          <button id="filtro-estudos" class="botao-filtro" type="button">
+            Estudos
+          </button>
 
-                <span id="data-atual"></span>
+          <button id="filtro-concluidas" class="botao-filtro" type="button">
+            Concluídas
+          </button>
 
+        </div>
+
+        <div class="grupo-pesquisa">
+
+          <input id="pesquisa-tarefa" type="search" placeholder="Buscar tarefa...">
+
+          <select id="ordenar-tarefas">
+
+            <option value="recentes">
+              Mais recentes
+            </option>
+
+            <option value="prazo">
+              Prazo
+            </option>
+
+            <option value="prioridade">
+              Prioridade
+            </option>
+
+          </select>
+
+        </div>
+
+      </section>
+
+
+      <!-- Área de trabalho — Layout - dividir tarefas e formulário -->
+      <div class="area-trabalho">
+
+        <!-- Painel de tarefas — Listagem - organizar tarefas cadastradas -->
+        <section class="painel-tarefas">
+
+          <!-- Tarefas de hoje — Listagem - exibir atividades planejadas para o dia -->
+          <section class="grupo-tarefas">
+
+            <div class="titulo-grupo">
+
+              <div>
+                <h2>Hoje</h2>
+
+                <span id="contador-hoje">
+                  0 tarefas
+                </span>
               </div>
 
-              <div id="lista-hoje" class="lista-tarefas">
-                <!-- As tarefas serão inseridas pelo JavaScript -->
-              </div>
+              <span id="data-atual"></span>
 
-            </section>
+            </div>
 
-
-            <!-- Próximos estudos — Listagem - exibir tarefas futuras -->
-            <section class="grupo-tarefas">
-
-              <div class="titulo-grupo">
-
-                <div>
-                  <h2>Próximos Estudos</h2>
-
-                  <span id="contador-proximas">
-                    0 tarefas
-                  </span>
-                </div>
-
-              </div>
-
-              <div id="lista-proximas" class="lista-tarefas">
-                <!-- As tarefas serão inseridas pelo JavaScript -->
-              </div>
-
-            </section>
-
-
-            <!-- Tarefas concluídas — Listagem - exibir histórico de atividades finalizadas -->
-            <section class="grupo-tarefas">
-
-              <div class="titulo-grupo">
-
-                <div>
-                  <h2>Concluídas</h2>
-
-                  <span id="contador-concluidas">
-                    0 tarefas
-                  </span>
-                </div>
-
-              </div>
-
-              <div id="lista-concluidas" class="lista-tarefas">
-                <!-- As tarefas serão inseridas pelo JavaScript -->
-              </div>
-
-            </section>
+            <div id="lista-hoje" class="lista-tarefas">
+              <!-- As tarefas serão inseridas pelo JavaScript -->
+            </div>
 
           </section>
 
 
-          <!-- Painel lateral — Layout - agrupar cadastro e acompanhamento -->
-          <aside class="painel-lateral-taskflow">
+          <!-- Próximos estudos — Listagem - exibir tarefas futuras -->
+          <section class="grupo-tarefas">
 
-            <!-- Formulário de tarefa — Cadastro - coletar dados para criação e edição -->
-            <section class="card-nova-tarefa">
+            <div class="titulo-grupo">
 
-              <div class="titulo-card">
+              <div>
+                <h2>Próximos Estudos</h2>
 
-                <div>
-
-                  <span class="card-identificador">
-                    PLANEJAMENTO
-                  </span>
-
-                  <h2>Nova Tarefa</h2>
-
-                </div>
-
+                <span id="contador-proximas">
+                  0 tarefas
+                </span>
               </div>
 
-              <form id="form-tarefa">
+            </div>
 
-                <div class="campo-formulario">
+            <div id="lista-proximas" class="lista-tarefas">
+              <!-- As tarefas serão inseridas pelo JavaScript -->
+            </div>
 
-                  <label for="titulo-tarefa">
-                    Título
-                  </label>
+          </section>
 
-                  <input id="titulo-tarefa" name="titulo" type="text" placeholder="Ex: Assistir aula de Arrays"
-                    required>
 
-                </div>
+          <!-- Tarefas concluídas — Listagem - exibir histórico de atividades finalizadas -->
+          <section class="grupo-tarefas">
 
+            <div class="titulo-grupo">
 
-                <div class="campo-formulario">
+              <div>
+                <h2>Concluídas</h2>
 
-                  <label for="descricao-tarefa">
-                    Descrição
-                  </label>
-
-                  <textarea id="descricao-tarefa" name="descricao"
-                    placeholder="Detalhe sua tarefa de estudo..."></textarea>
-
-                </div>
-
-
-                <div class="linha-formulario">
-
-                  <div class="campo-formulario">
-
-                    <label for="tecnologia-tarefa">
-                      Tecnologia
-                    </label>
-
-                    <select id="tecnologia-tarefa" name="tecnologia">
-                      <option value="">
-                        Selecione
-                      </option>
-
-                      <option value="html">
-                        HTML
-                      </option>
-
-                      <option value="css">
-                        CSS
-                      </option>
-
-                      <option value="javascript">
-                        JavaScript
-                      </option>
-
-                      <option value="react">
-                        React
-                      </option>
-
-                      <option value="node">
-                        Node.js
-                      </option>
-
-                      <option value="git">
-                        Git/GitHub
-                      </option>
-                    </select>
-
-                  </div>
-
-
-                  <div class="campo-formulario">
-
-                    <label for="modulo-tarefa">
-                      Módulo
-                    </label>
-
-                    <input id="modulo-tarefa" name="modulo" type="text" placeholder="Ex: Módulo 4">
-
-                  </div>
-
-                </div>
-
-
-                <div class="linha-formulario">
-
-                  <div class="campo-formulario">
-
-                    <label for="tipo-tarefa">
-                      Tipo
-                    </label>
-
-                    <select id="tipo-tarefa" name="tipo">
-                      <option value="">
-                        Selecione
-                      </option>
-
-                      <option value="aula">
-                        Aula
-                      </option>
-
-                      <option value="pratica">
-                        Prática
-                      </option>
-
-                      <option value="revisao">
-                        Revisão
-                      </option>
-
-                      <option value="projeto">
-                        Projeto
-                      </option>
-                    </select>
-
-                  </div>
-
-
-                  <div class="campo-formulario">
-
-                    <label for="prioridade-tarefa">
-                      Prioridade
-                    </label>
-
-                    <select id="prioridade-tarefa" name="prioridade">
-                      <option value="">
-                        Selecione
-                      </option>
-
-                      <option value="baixa">
-                        Baixa
-                      </option>
-
-                      <option value="media">
-                        Média
-                      </option>
-
-                      <option value="alta">
-                        Alta
-                      </option>
-                    </select>
-
-                  </div>
-
-                </div>
-
-
-                <div class="campo-formulario">
-
-                  <label for="prazo-tarefa">
-                    Prazo
-                  </label>
-
-                  <input id="prazo-tarefa" name="prazo" type="date">
-
-                </div>
-
-
-                <!-- Ações do formulário — Cadastro - controlar envio e cancelamento da tarefa -->
-                <div class="acoes-formulario">
-
-                  <button id="cancelar-tarefa" class="botao-secundario" type="button">
-                    Cancelar
-                  </button>
-
-                  <button id="salvar-tarefa" class="botao-principal" type="submit">
-                    Salvar Tarefa
-                  </button>
-
-                </div>
-
-              </form>
-
-            </section>
-
-
-            <!-- Progresso das tarefas — Indicadores - apresentar evolução calculada pelo JavaScript -->
-            <section class="card-progresso">
-
-              <div class="titulo-card">
-
-                <div>
-
-                  <span class="card-identificador">
-                    EVOLUÇÃO
-                  </span>
-
-                  <h2>Meu Progresso</h2>
-
-                </div>
-
+                <span id="contador-concluidas">
+                  0 tarefas
+                </span>
               </div>
 
+            </div>
 
-              <div class="progresso-principal">
+            <div id="lista-concluidas" class="lista-tarefas">
+              <!-- As tarefas serão inseridas pelo JavaScript -->
+            </div>
 
-                <strong id="porcentagem-progresso">
-                  0%
-                </strong>
+          </section>
 
-                <span>
-                  das tarefas concluídas
+        </section>
+
+
+        <!-- Painel lateral — Layout - agrupar cadastro e acompanhamento -->
+        <aside class="painel-lateral-taskflow">
+
+          <!-- Planejamento de estudo — Cadastro - organizar continuidade do aprendizado -->
+          <section class="card-nova-tarefa">
+
+            <div class="titulo-card">
+
+              <div>
+
+                <span class="card-identificador">
+                  PLANEJAMENTO
                 </span>
 
-              </div>
-
-
-              <div class="resumo-progresso">
-
-                <div class="indicador-progresso">
-
-                  <span>Total</span>
-
-                  <strong id="total-tarefas">
-                    0
-                  </strong>
-
-                </div>
-
-                <div class="indicador-progresso">
-
-                  <span>Hoje</span>
-
-                  <strong id="total-hoje">
-                    0
-                  </strong>
-
-                </div>
-
-                <div class="indicador-progresso">
-
-                  <span>Próximas</span>
-
-                  <strong id="total-proximas">
-                    0
-                  </strong>
-
-                </div>
-
-                <div class="indicador-progresso">
-
-                  <span>Concluídas</span>
-
-                  <strong id="total-concluidas">
-                    0
-                  </strong>
-
-                </div>
+                <h2>Planejar Estudo</h2>
 
               </div>
 
-            </section>
+            </div>
+
+            <form id="form-tarefa">
+
+              <!-- Trilha — Cadastro - identificar área principal de aprendizado -->
+              <div class="campo-formulario">
+
+                <label for="trilha-tarefa">
+                  Trilha
+                </label>
+
+                <select id="trilha-tarefa" name="trilha" required>
+
+                  <option value="">
+                    Selecione uma trilha
+                  </option>
+
+                  <option value="frontend">
+                    Front-end
+                  </option>
+
+                  <option value="backend">
+                    Back-end
+                  </option>
+
+                  <option value="mobile">
+                    Mobile
+                  </option>
+
+                  <option value="carreira">
+                    Carreira
+                  </option>
+
+                </select>
+
+              </div>
 
 
-            <!-- Mensagem de estudo — Apresentação - reforçar identidade visual do TaskFlow -->
-            <section class="card-motivacao">
+              <!-- Tecnologia — Cadastro - identificar conteúdo estudado -->
+              <div class="campo-formulario">
 
-              <span class="aspas">
-                “
+                <label for="tecnologia-tarefa">
+                  Tecnologia
+                </label>
+
+                <select id="tecnologia-tarefa" name="tecnologia" required>
+
+                  <option value="">
+                    Selecione primeiro uma trilha
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- Módulo — Cadastro - registrar módulo específico estudado -->
+              <div class="campo-formulario">
+
+                <label for="modulo-tarefa">
+                  Módulo
+                </label>
+
+                <input id="modulo-tarefa" name="modulo" type="text" placeholder="Ex: Arrays" required>
+
+              </div>
+
+
+              <!-- Atividade — Cadastro - definir próxima ação de aprendizagem -->
+              <div class="campo-formulario">
+
+                <label for="atividade-tarefa">
+                  Atividade
+                </label>
+
+                <select id="atividade-tarefa" name="atividade" required>
+
+                  <option value="">
+                    Selecione
+                  </option>
+
+                  <option value="estudo">
+                    Estudo
+                  </option>
+
+                  <option value="revisao">
+                    Revisão
+                  </option>
+
+                  <option value="pratica">
+                    Prática
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- Descrição — Cadastro - detalhar ação planejada -->
+              <div class="campo-formulario">
+
+                <label for="descricao-tarefa">
+                  Descrição
+                </label>
+
+                <textarea id="descricao-tarefa" name="descricao"
+                  placeholder="Ex: Revisar resumo e praticar métodos de array"></textarea>
+
+              </div>
+
+
+              <!-- Prazo — Cadastro - definir quando a atividade será realizada -->
+              <div class="campo-formulario">
+
+                <label for="prazo-tarefa">
+                  Prazo
+                </label>
+
+                <input id="prazo-tarefa" name="prazo" type="date" required>
+
+              </div>
+
+
+              <!-- Ações do formulário — Cadastro - controlar planejamento -->
+              <div class="acoes-formulario">
+
+                <button id="cancelar-tarefa" class="botao-secundario" type="button">
+                  Cancelar
+                </button>
+
+                <button id="salvar-tarefa" class="botao-principal" type="submit">
+                  Adicionar Tarefa
+                </button>
+
+              </div>
+
+            </form>
+
+          </section>
+
+
+          <!-- Progresso das tarefas — Indicadores - apresentar evolução calculada pelo JavaScript -->
+          <section class="card-progresso">
+
+            <div class="titulo-card">
+
+              <div>
+
+                <span class="card-identificador">
+                  EVOLUÇÃO
+                </span>
+
+                <h2>Meu Progresso</h2>
+
+              </div>
+
+            </div>
+
+
+            <div class="progresso-principal">
+
+              <strong id="porcentagem-progresso">
+                0%
+              </strong>
+
+              <span>
+                das tarefas concluídas
               </span>
 
-              <p>
-                Pequenas ações diárias constroem
-                grandes resultados.
-              </p>
+            </div>
 
-            </section>
 
-          </aside>
+            <div class="resumo-progresso">
 
-        </div>
+              <div class="indicador-progresso">
+
+                <span>Total</span>
+
+                <strong id="total-tarefas">
+                  0
+                </strong>
+
+              </div>
+
+              <div class="indicador-progresso">
+
+                <span>Hoje</span>
+
+                <strong id="total-hoje">
+                  0
+                </strong>
+
+              </div>
+
+              <div class="indicador-progresso">
+
+                <span>Próximas</span>
+
+                <strong id="total-proximas">
+                  0
+                </strong>
+
+              </div>
+
+              <div class="indicador-progresso">
+
+                <span>Concluídas</span>
+
+                <strong id="total-concluidas">
+                  0
+                </strong>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- Mensagem de estudo — Apresentação - reforçar identidade visual do TaskFlow -->
+          <section class="card-motivacao">
+
+            <span class="aspas">
+              “
+            </span>
+
+            <p>
+              Pequenas ações diárias constroem
+              grandes resultados.
+            </p>
+
+          </section>
+
+        </aside>
+
+      </div>
 
     </main>
 
