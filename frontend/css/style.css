@@ -97,9 +97,12 @@ a {
     align-items: center;
 }
 
+/* Logo DevClub — Apresentação - controlar tamanho da logo do menu */
 .logo-devclub img {
-    max-width: 130px;
-    max-height: 40px;
+    width: 42px;
+    height: 42px;
+
+    display: block;
     object-fit: contain;
 }
 
@@ -318,13 +321,14 @@ a {
 
     overflow: hidden;
 
-    background:
-        radial-gradient(circle at center,
-            rgba(124, 58, 237, 0.12) 0%,
-            rgba(124, 58, 237, 0.04) 30%,
-            transparent 60%),
-        var(--cor-fundo);
+    background-image:
+        url("../img/Fundo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 
 /* ========================================
@@ -454,15 +458,16 @@ a {
     z-index: 2;
 }
 
+/* Logo central — Apresentação - dimensionar identidade visual do TaskFlow */
+.taskflow-centro img {
+    width: 400px;
+    height: 400px;
 
-.taskflow-centro span {
-    color: var(--cor-texto);
+    display: block;
 
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    object-fit: contain;
+     max-width: none;
 }
-
 
 /* ========================================
    BOTÕES DOS TÓPICOS
