@@ -7,13 +7,19 @@ const viewTaskFlow = document.querySelector("#view-taskflow");
 // Tópicos do TaskFlow — Seleção - localizar todos os tópicos disponíveis
 const topicosTaskFlow = document.querySelectorAll(".topico-taskflow");
 
-// Distribuição dos tópicos — Processamento - calcular o ângulo de cada tópico no círculo
+// Distribuição dos tópicos — Processamento - calcular a posição de cada tópico no círculo
+const raio = 300;
+
 topicosTaskFlow.forEach(function (topico, indice) {
 
     const angulo = (360 / topicosTaskFlow.length) * indice;
+
     const anguloRadianos = angulo * (Math.PI / 180);
 
-    console.log(indice, angulo, anguloRadianos);
+    const posicaoX = Math.cos(anguloRadianos) * raio;
+    const posicaoY = Math.sin(anguloRadianos) * raio;
+
+    console.log(indice, posicaoX, posicaoY);
 
 });
 
