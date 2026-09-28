@@ -35,24 +35,34 @@ botaoTaskFlow.addEventListener("click", function (event) {
     botaoHome.classList.remove("item-menu-ativo");
     botaoTaskFlow.classList.add("item-menu-ativo");
 
+    // Entrada dos tópicos — Atualização - iniciar sequência após abertura do TaskFlow
 
-    console.log("TaskFlow clicado");
+    topicosTaskFlow.forEach(function (topico, indice) {
 
-});
+        setTimeout(function () {
 
-// Retorno para Home — Escuta - identificar clique no acesso à Home
+            topico.classList.add("topico-visivel");
 
-botaoHome.addEventListener("click", function (event) {
+        }, indice * 100);
 
-    event.preventDefault();
+        console.log("TaskFlow clicado");
+
+    });
+
+    // Retorno para Home — Escuta - identificar clique no acesso à Home
+
+    botaoHome.addEventListener("click", function (event) {
+
+        event.preventDefault();
 
 
-    // Troca para Home — Atualização - restaurar a view inicial da aplicação
+        // Troca para Home — Atualização - restaurar a view inicial da aplicação
 
-    viewTaskFlow.classList.remove("view-ativa");
-    viewHome.classList.add("view-ativa");
+        viewTaskFlow.classList.remove("view-ativa");
+        viewHome.classList.add("view-ativa");
 
-    botaoTaskFlow.classList.remove("item-menu-ativo");
-    botaoHome.classList.add("item-menu-ativo");
+        botaoTaskFlow.classList.remove("item-menu-ativo");
+        botaoHome.classList.add("item-menu-ativo");
 
+    });
 });

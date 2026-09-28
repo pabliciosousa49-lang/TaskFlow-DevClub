@@ -477,6 +477,7 @@ a {
 
     top: 50%;
     left: 50%;
+    opacity: 0;
 
     width: 105px;
     min-height: 76px;
@@ -508,6 +509,10 @@ a {
     z-index: 3;
 }
 
+/* Entrada dos tópicos — Atualização - tornar o tópico visível durante a animação */
+.topico-taskflow.topico-visivel {
+    opacity: 1;
+}
 
 /* Interação visual */
 .topico-taskflow:hover {
