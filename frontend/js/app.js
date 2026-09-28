@@ -26,3 +26,20 @@ botaoTaskFlow.addEventListener("click", function (event) {
     console.log("TaskFlow clicado");
 
 });
+
+// Retorno para Home — Escuta - identificar clique no acesso à Home
+
+botaoHome.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+
+    // Troca para Home — Atualização - restaurar a view inicial da aplicação
+
+    viewTaskFlow.classList.remove("view-ativa");
+    viewHome.classList.add("view-ativa");
+
+    botaoTaskFlow.classList.remove("item-menu-ativo");
+    botaoHome.classList.add("item-menu-ativo");
+
+});
