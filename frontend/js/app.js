@@ -7,10 +7,12 @@ const viewTaskFlow = document.querySelector("#view-taskflow");
 // Tópicos do TaskFlow — Seleção - localizar todos os tópicos disponíveis
 const topicosTaskFlow = document.querySelectorAll(".topico-taskflow");
 
-// Percorrer tópicos — Processamento - identificar cada tópico e sua posição na lista
+// Distribuição dos tópicos — Processamento - calcular o ângulo de cada tópico no círculo
 topicosTaskFlow.forEach(function (topico, indice) {
 
-    console.log(indice, topico);
+    const angulo = (360 / topicosTaskFlow.length) * indice;
+
+    console.log(indice, angulo);
 
 });
 
