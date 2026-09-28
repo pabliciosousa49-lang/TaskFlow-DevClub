@@ -11,8 +11,9 @@ const topicosTaskFlow = document.querySelectorAll(".topico-taskflow");
 topicosTaskFlow.forEach(function (topico, indice) {
 
     const angulo = (360 / topicosTaskFlow.length) * indice;
+    const anguloRadianos = angulo * (Math.PI / 180);
 
-    console.log(indice, angulo);
+    console.log(indice, angulo, anguloRadianos);
 
 });
 
