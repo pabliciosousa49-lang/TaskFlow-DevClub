@@ -322,6 +322,10 @@ a {
     overflow: hidden;
 
     background-image:
+    linear-gradient(
+            rgba(88, 49, 205, 0.495),
+            rgba(46, 45, 45, 0.614)
+        ),
         url("../img/Fundo.png");
 
     background-size: cover;
@@ -552,3 +556,4 @@ a {
 
     text-align: center;
 }
+
