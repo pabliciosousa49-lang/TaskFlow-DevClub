@@ -326,7 +326,7 @@ a {
             rgba(88, 49, 205, 0.495),
             rgba(46, 45, 45, 0.614)
         ),
-        url("../img/Fundo.png");
+        url("../../assets/images/Fundo.png");
 
     background-size: cover;
     background-position: center;

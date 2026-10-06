@@ -1,48 +1,58 @@
-# TaskFlow DevClub
+# DevPath
 
-Gerenciador de tarefas de estudo criado para consolidar JavaScript puro por meio de um CRUD completo e de funcionalidades de organização de estudos.
+Projeto em transição a partir do TaskFlow DevClub, desenvolvido com HTML, CSS e JavaScript puro.
 
-## Problema
-Alunos precisam organizar aulas, práticas, revisões e projetos sem perder a visão do que deve ser feito e do próprio progresso.
+## Estado atual
 
-## Objetivo
-Criar uma área de gerenciamento de estudos com identidade visual alinhada à plataforma DevClub e usar o projeto como validação prática de JavaScript.
+Home e tela TaskFlow com navegação, apresentação responsiva e 21 tópicos de estudo. Esta etapa reorganiza apenas os arquivos, preservando a interface e o comportamento existentes.
 
-## MVP
-- Criar tarefa
-- Visualizar tarefas
-- Editar tarefa
-- Excluir tarefa
-- Concluir/reabrir tarefa
-- Filtrar tarefas
-- Buscar tarefas
-- Ordenar tarefas
-- Exibir progresso
-- Persistir dados localmente
+O CRUD de tarefas, busca, filtros, ordenação, progresso e LocalStorage eram objetivos do TaskFlow e ainda não estão implementados.
 
-## Tecnologias da versão inicial
-- HTML5
-- CSS3
-- JavaScript ES6+
-- LocalStorage
+## Direção futura
+
+Aprender, Praticar, Construir, Carreira e Perfil serão as áreas do DevPath. Elas não foram implementadas nesta migração. Pastas e páginas serão criadas quando houver conteúdo real.
+
+## Tecnologias
+
+HTML5, CSS3 e JavaScript ES6+. Devicon e Font Awesome continuam carregados por CDN, como anteriormente. Nenhuma dependência foi adicionada.
 
 ## Arquitetura
+
 ```text
 TaskFlow-DevClub/
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── app.js
-│   └── img/
-│       └── README.md
-├── docs/
-│   ├── roadmap.md
-│   ├── fase-1-interface.md
-│   └── metodologia.md
+├── index.html
+├── css/
+│   └── global/
+│       └── style.css
+├── js/
+│   └── core/
+│       └── app.js
+├── assets/
+│   └── images/
+│       ├── cabeçalhotask.png
+│       ├── devLogo.png
+│       ├── Fundo.png
+│       ├── principal-home.png
+│       └── TaskCentro.png
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
 └── README.md
 ```
 
-## Status
-Fase 1 — Interface: iniciada.
+O nome do diretório do repositório foi mantido. O CSS permanece inteiro em um arquivo global e o JavaScript de inicialização e navegação em js/core/app.js. Todas as imagens foram preservadas, incluindo a imagem sem referência atual na interface.
+
+## Execução e teste manual
+
+1. Abra index.html, na raiz, em um navegador. Não há instalação ou build.
+2. Confira a Home, o banner, o logo e o menu. A Home deve começar selecionada.
+3. Clique em TaskFlow e confira o fundo, a imagem central e os 21 tópicos, com entrada gradual em círculo no desktop.
+4. Clique em Home Dev Club e confirme o retorno ao banner. Repita a navegação.
+5. Reduza a largura para até 768 px: confira o menu horizontal e os tópicos em duas colunas. Retorne ao desktop e confira a órbita.
+6. No DevTools, confira que CSS, JavaScript e imagens locais carregam sem erros de caminho. Os ícones externos precisam de internet.
+
+Pesquisa, recolhimento do menu e seleção dos tópicos mantêm seu comportamento anterior, sem funcionalidades novas.
+
+## Publicação existente
+
+O workflow do GitHub Pages usa a raiz como origem do artefato, acompanhando a mudança do index.html. Nenhuma publicação foi executada nesta reorganização.
