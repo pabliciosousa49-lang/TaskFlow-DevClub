@@ -126,215 +126,191 @@
 
 
 
-      <!-- ========================================
-         VIEW TASKFLOW
-    ========================================= -->
-
-      <!-- TaskFlow — Navegação - disponibilizar seleção dos conteúdos de estudo -->
-      <section id="view-taskflow" class="view">
-
-        <div class="taskflow-container">
-
-
-          <!-- Apresentação TaskFlow — Apresentação - orientar seleção de conteúdo -->
-          <header class="taskflow-cabecalho">
-
-            <span class="taskflow-identificador">
-              TASKFLOW
-            </span>
-
-            <h1>
-              O que você está estudando?
-            </h1>
-
-            <p>
-              Escolha um tópico para continuar sua jornada.
-            </p>
-
-          </header>
-
-
-
-          <!-- Órbita TaskFlow — Layout - organizar tópicos ao redor do elemento central -->
-          <div class="taskflow-orbita">
-
-
-            <!-- Centro TaskFlow — Identidade - representar núcleo da experiência -->
-            <div class="taskflow-centro">
-
-              <img src="./assets/images/TaskCentro.png" alt="DevClub TaskFlow">
-
+      <!-- Recepção TaskFlow — Estrutura - apresenta o ambiente e suas áreas de estudo -->
+      <section id="view-taskflow" class="view" aria-labelledby="titulo-taskflow">
+        <div class="taskflow-recepcao">
+          <!-- Apresentação — Estrutura - acolhe o aluno e explica o propósito do ambiente -->
+          <header class="taskflow-apresentacao">
+            <div class="taskflow-boas-vindas">
+              <span class="taskflow-identificador">DEVCLUB / TASKFLOW</span>
+              <p class="taskflow-saudacao">Boas-vindas ao seu espaço de evolução.</p>
+              <h1 id="titulo-taskflow">Seu próximo passo<br>começa <span>aqui.</span></h1>
+              <p class="taskflow-descricao">Um ponto de encontro para seus estudos, suas ideias e seu futuro. Explore os
+                assuntos que fazem parte da sua jornada como dev.</p>
+              <a class="taskflow-explorar" href="#taskflow-areas">Explore as áreas <span aria-hidden="true">↓</span></a>
             </div>
-
-
-
-            <!-- ========================================
-                     FRONT END
-                ========================================= -->
-
-            <!-- Front End — Seleção - disponibilizar conteúdos de desenvolvimento front-end -->
-
-            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="html">
-              <i class="devicon-html5-plain colored topico-icone"></i>
-              <span class="topico-nome">HTML</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="css">
-              <i class="devicon-css3-plain colored topico-icone"></i>
-              <span class="topico-nome">CSS</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
-              data-topico="javascript">
-              <i class="devicon-javascript-plain colored topico-icone"></i>
-              <span class="topico-nome">JavaScript</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
-              data-topico="typescript">
-              <i class="devicon-typescript-plain colored topico-icone"></i>
-              <span class="topico-nome">TypeScript</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="react">
-              <i class="devicon-react-plain colored topico-icone"></i>
-              <span class="topico-nome">React</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend" data-topico="vite">
-              <i class="devicon-vitejs-plain colored topico-icone"></i>
-              <span class="topico-nome">Vite</span>
-            </button>
-
-
-
-            <!-- ========================================
-                     BACK END
-                ========================================= -->
-
-            <!-- Back End — Seleção - disponibilizar conteúdos de desenvolvimento back-end -->
-
-            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="node">
-              <i class="devicon-nodejs-plain colored topico-icone"></i>
-              <span class="topico-nome">Node</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="express">
-              <i class="devicon-express-plain colored topico-icone"></i>
-              <span class="topico-nome">Express</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="fastify">
-              <i class="devicon-fastify-plain colored topico-icone"></i>
-              <span class="topico-nome">Fastify</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="prisma">
-              <i class="devicon-prisma-plain colored topico-icone"></i>
-              <span class="topico-nome">Prisma</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
-              data-topico="postgres">
-              <i class="devicon-postgresql-plain colored topico-icone"></i>
-              <span class="topico-nome">Postgres</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="mongodb">
-              <i class="devicon-mongodb-plain colored topico-icone"></i>
-              <span class="topico-nome">MongoDB</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-backend" type="button" data-categoria="backend" data-topico="docker">
-              <i class="devicon-docker-plain colored topico-icone"></i>
-              <span class="topico-nome">Docker</span>
-            </button>
-
-
-
-            <!-- ========================================
-                     MOBILE
-                ========================================= -->
-
-            <!-- Mobile — Seleção - disponibilizar conteúdos de desenvolvimento mobile -->
-
-            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile"
-              data-topico="react-native">
-              <i class="devicon-react-plain colored topico-icone"></i>
-              <span class="topico-nome">React Native</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile" data-topico="expo">
-              <i class="devicon-expo-plain colored topico-icone"></i>
-              <span class="topico-nome">Expo</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile" data-topico="android">
-              <i class="devicon-android-plain colored topico-icone"></i>
-              <span class="topico-nome">Android</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile" data-topico="ios">
-              <i class="devicon-ios-plain colored topico-icone"></i>
-              <span class="topico-nome">iOS</span>
-            </button>
-
-
-
-            <!-- ========================================
-                     CARREIRA
-                ========================================= -->
-
-            <!-- Carreira — Seleção - disponibilizar conteúdos de desenvolvimento profissional -->
-            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
-              data-topico="linkedin">
-              <i class="fa-brands fa-linkedin topico-icone icone-linkedin"></i>
-              <span class="topico-nome">LinkedIn</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
-              data-topico="curriculo">
-              <i class="fa-regular fa-file topico-icone"></i>
-              <span class="topico-nome">Currículo</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
-              data-topico="entrevistas">
-              <i class="fa-regular fa-user topico-icone"></i>
-              <span class="topico-nome">Entrevistas</span>
-            </button>
-
-
-            <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
-              data-topico="processos-seletivos">
-              <i class="fa-regular fa-list topico-icone"></i>
-
-              <span class="topico-nome">
-                Processos seletivos
-              </span>
-            </button>
-
-
-          </div>
-
+            <div class="taskflow-identidade" aria-hidden="true">
+              <div class="taskflow-anel"></div>
+              <img src="./assets/images/TaskCentro.png" alt="">
+              <span class="taskflow-legenda">APRENDA. EXPERIMENTE. EVOLUA.</span>
+            </div>
+          </header>
+          <!-- Áreas de estudo — Estrutura - apresenta os tópicos sem antecipar páginas individuais -->
+          <section id="taskflow-areas" class="taskflow-areas" aria-labelledby="titulo-areas">
+            <div class="taskflow-areas-cabecalho">
+              <div>
+                <span class="taskflow-identificador">UM UNIVERSO DE POSSIBILIDADES</span>
+                <h2 id="titulo-areas">Encontre sua direção.</h2>
+              </div>
+              <p>Quatro áreas para conhecer.<br>Novas experiências por tópico virão nas próximas etapas.</p>
+            </div>
+            <div class="taskflow-mapa">
+              <!-- Front-end — Estrutura - agrupa os tópicos desta área -->
+              <article class="area-tecnologia" aria-labelledby="titulo-frontend">
+                <header class="area-cabecalho">
+                  <span class="area-numero" aria-hidden="true">01</span>
+                  <div>
+                    <h3 id="titulo-frontend">Front-end</h3>
+                    <p>Dê forma às suas ideias na web.</p>
+                  </div>
+                </header>
+                <div class="area-topicos">
+                  <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+                    data-topico="html">
+                    <i aria-hidden="true" class="devicon-html5-plain colored topico-icone"></i>
+                    <span class="topico-nome">HTML</span>
+                  </button>
+                  <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+                    data-topico="css">
+                    <i aria-hidden="true" class="devicon-css3-plain colored topico-icone"></i>
+                    <span class="topico-nome">CSS</span>
+                  </button>
+                  <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+                    data-topico="javascript">
+                    <i aria-hidden="true" class="devicon-javascript-plain colored topico-icone"></i>
+                    <span class="topico-nome">JavaScript</span>
+                  </button>
+                  <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+                    data-topico="typescript">
+                    <i aria-hidden="true" class="devicon-typescript-plain colored topico-icone"></i>
+                    <span class="topico-nome">TypeScript</span>
+                  </button>
+                  <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+                    data-topico="react">
+                    <i aria-hidden="true" class="devicon-react-plain colored topico-icone"></i>
+                    <span class="topico-nome">React</span>
+                  </button>
+                  <button class="topico-taskflow topico-frontend" type="button" data-categoria="frontend"
+                    data-topico="vite">
+                    <i aria-hidden="true" class="devicon-vitejs-plain colored topico-icone"></i>
+                    <span class="topico-nome">Vite</span>
+                  </button>
+                </div>
+              </article>
+              <!-- Back-end — Estrutura - agrupa os tópicos desta área -->
+              <article class="area-tecnologia" aria-labelledby="titulo-backend">
+                <header class="area-cabecalho">
+                  <span class="area-numero" aria-hidden="true">02</span>
+                  <div>
+                    <h3 id="titulo-backend">Back-end</h3>
+                    <p>Conheça o que faz tudo acontecer.</p>
+                  </div>
+                </header>
+                <div class="area-topicos">
+                  <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+                    data-topico="node">
+                    <i aria-hidden="true" class="devicon-nodejs-plain colored topico-icone"></i>
+                    <span class="topico-nome">Node</span>
+                  </button>
+                  <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+                    data-topico="express">
+                    <i aria-hidden="true" class="devicon-express-plain colored topico-icone"></i>
+                    <span class="topico-nome">Express</span>
+                  </button>
+                  <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+                    data-topico="fastify">
+                    <i aria-hidden="true" class="devicon-fastify-plain colored topico-icone"></i>
+                    <span class="topico-nome">Fastify</span>
+                  </button>
+                  <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+                    data-topico="prisma">
+                    <i aria-hidden="true" class="devicon-prisma-plain colored topico-icone"></i>
+                    <span class="topico-nome">Prisma</span>
+                  </button>
+                  <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+                    data-topico="postgres">
+                    <i aria-hidden="true" class="devicon-postgresql-plain colored topico-icone"></i>
+                    <span class="topico-nome">PostgreSQL</span>
+                  </button>
+                  <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+                    data-topico="mongodb">
+                    <i aria-hidden="true" class="devicon-mongodb-plain colored topico-icone"></i>
+                    <span class="topico-nome">MongoDB</span>
+                  </button>
+                  <button class="topico-taskflow topico-backend" type="button" data-categoria="backend"
+                    data-topico="docker">
+                    <i aria-hidden="true" class="devicon-docker-plain colored topico-icone"></i>
+                    <span class="topico-nome">Docker</span>
+                  </button>
+                </div>
+              </article>
+              <!-- Mobile — Estrutura - agrupa os tópicos desta área -->
+              <article class="area-tecnologia" aria-labelledby="titulo-mobile">
+                <header class="area-cabecalho">
+                  <span class="area-numero" aria-hidden="true">03</span>
+                  <div>
+                    <h3 id="titulo-mobile">Mobile</h3>
+                    <p>Leve suas ideias para outras telas.</p>
+                  </div>
+                </header>
+                <div class="area-topicos">
+                  <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile"
+                    data-topico="react-native">
+                    <i aria-hidden="true" class="devicon-react-plain colored topico-icone"></i>
+                    <span class="topico-nome">React Native</span>
+                  </button>
+                  <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile"
+                    data-topico="expo">
+                    <i aria-hidden="true" class="devicon-expo-plain colored topico-icone"></i>
+                    <span class="topico-nome">Expo</span>
+                  </button>
+                  <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile"
+                    data-topico="android">
+                    <i aria-hidden="true" class="devicon-android-plain colored topico-icone"></i>
+                    <span class="topico-nome">Android</span>
+                  </button>
+                  <button class="topico-taskflow topico-mobile" type="button" data-categoria="mobile" data-topico="ios">
+                    <i aria-hidden="true" class="devicon-ios-plain colored topico-icone"></i>
+                    <span class="topico-nome">iOS</span>
+                  </button>
+                </div>
+              </article>
+              <!-- Carreira — Estrutura - agrupa os tópicos desta área -->
+              <article class="area-tecnologia" aria-labelledby="titulo-carreira">
+                <header class="area-cabecalho">
+                  <span class="area-numero" aria-hidden="true">04</span>
+                  <div>
+                    <h3 id="titulo-carreira">Carreira</h3>
+                    <p>Prepare seu próximo passo profissional.</p>
+                  </div>
+                </header>
+                <div class="area-topicos">
+                  <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+                    data-topico="linkedin">
+                    <i aria-hidden="true" class="fa-brands fa-linkedin topico-icone icone-linkedin"></i>
+                    <span class="topico-nome">LinkedIn</span>
+                  </button>
+                  <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+                    data-topico="curriculo">
+                    <i aria-hidden="true" class="fa-regular fa-file topico-icone"></i>
+                    <span class="topico-nome">Currículo</span>
+                  </button>
+                  <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+                    data-topico="entrevistas">
+                    <i aria-hidden="true" class="fa-regular fa-user topico-icone"></i>
+                    <span class="topico-nome">Entrevistas</span>
+                  </button>
+                  <button class="topico-taskflow topico-carreira" type="button" data-categoria="carreira"
+                    data-topico="processos-seletivos">
+                    <i aria-hidden="true" class="fa-solid fa-list topico-icone"></i>
+                    <span class="topico-nome">Processos seletivos</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+            <p class="taskflow-nota">Cada jornada tem seu ritmo. Comece pela curiosidade.</p>
+          </section>
         </div>
-
       </section>
 
     </main>

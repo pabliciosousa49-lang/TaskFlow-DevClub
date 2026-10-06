@@ -296,273 +296,119 @@ a {
 }
 
 
-/* ========================================
-   BLOCO 4 — AMBIENTE TASKFLOW
-   Responsabilidade: construir a área visual
-   de seleção dos tópicos
-======================================== */
-
-#view-taskflow {
-    width: 100%;
+/* Recepção TaskFlow — Visual - estabelece uma apresentação editorial com identidade escura */
+.taskflow-recepcao {
     min-height: 100vh;
+    padding: clamp(24px, 4vw, 64px);
+    background: radial-gradient(ellipse at 85% 10%, rgba(124, 58, 237, .18), transparent 45%), var(--cor-fundo);
 }
-
-
-/* Container principal do TaskFlow */
-.taskflow-container {
-    width: 100%;
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
+.taskflow-apresentacao {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 32px;
     align-items: center;
-
-    padding: 40px;
-
-    overflow: hidden;
-
-    background-image:
-    linear-gradient(
-            rgba(88, 49, 205, 0.495),
-            rgba(46, 45, 45, 0.614)
-        ),
-        url("../../assets/images/Fundo.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding: 24px 0 56px;
 }
-
-
-
-/* ========================================
-   CABEÇALHO
-======================================== */
-
-.taskflow-cabecalho {
-    width: 100%;
-    max-width: 900px;
-
-    text-align: center;
-
-    margin-bottom: 30px;
-}
-
-
 .taskflow-identificador {
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    color: var(--cor-principal);
-
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-
-.taskflow-cabecalho h1 {
-    margin-bottom: 10px;
-
-    color: var(--cor-texto);
-
-    font-size: 34px;
-    line-height: 1.2;
-}
-
-
-.taskflow-cabecalho p {
-    color: var(--cor-texto-secundario);
-
-    font-size: 15px;
-}
-
-
-/* ========================================
-   ÓRBITA
-======================================== */
-
-.taskflow-orbita {
-    position: relative;
-
-    width: min(760px, 75vw);
-    aspect-ratio: 1 / 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: auto;
-}
-
-
-/* Círculo visual de referência */
-.taskflow-orbita::before {
-    content: "";
-
-    position: absolute;
-
-    width: 72%;
-    height: 72%;
-
-    border: 1px solid rgba(124, 58, 237, 0.22);
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-
-/* Segundo círculo decorativo */
-.taskflow-orbita::after {
-    content: "";
-
-    position: absolute;
-
-    width: 48%;
-    height: 48%;
-
-    border: 1px solid rgba(124, 58, 237, 0.1);
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-
-/* ========================================
-   CENTRO DO TASKFLOW
-======================================== */
-
-.taskflow-centro {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    width: 150px;
-    height: 150px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transform: translate(-50%, -50%);
-
-    border: 1px solid rgba(139, 92, 246, 0.7);
-    border-radius: 50%;
-
-    background:
-        radial-gradient(circle,
-            rgba(124, 58, 237, 0.35),
-            rgba(17, 17, 17, 0.95) 70%);
-
-    box-shadow:
-        0 0 40px rgba(124, 58, 237, 0.18);
-
-    z-index: 2;
-}
-
-/* Logo central — Apresentação - dimensionar identidade visual do TaskFlow */
-.taskflow-centro img {
-    width: 400px;
-    height: 400px;
-
     display: block;
-
-    object-fit: contain;
-     max-width: none;
-}
-
-/* ========================================
-   BOTÕES DOS TÓPICOS
-======================================== */
-
-.topico-taskflow {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-
-    width: 105px;
-    min-height: 76px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    padding: 10px;
-
-    border: 1px solid var(--cor-borda);
-    border-radius: 14px;
-
-    background-color: rgba(23, 23, 23, 0.96);
-    color: var(--cor-texto);
-
-    transform: translate(-50%, -50%);
-
-    transition:
-        transform 0.6s ease,
-        opacity 0.6s ease,
-        border-color 0.25s ease,
-        background-color 0.25s ease,
-        box-shadow 0.25s ease;
-
-    z-index: 3;
-}
-
-/* Entrada dos tópicos — Atualização - tornar o tópico visível durante a animação */
-.topico-taskflow.topico-visivel {
-    opacity: 1;
-}
-
-/* Interação visual */
-.topico-taskflow:hover {
-    border-color: var(--cor-principal);
-
-    background-color: var(--cor-superficie);
-
-    box-shadow:
-        0 0 24px rgba(124, 58, 237, 0.22);
-}
-
-
-/* Ícone temporário */
-.topico-icone {
-    font-size: 30px;
+    color: #b99af8;
+    font-size: 11px;
     font-weight: 700;
-    color: var(--cor-sucesso);
+    letter-spacing: 2px;
+    line-height: 1.6;
 }
-
-/* Ícones de carreira — Apresentação - diferenciar conteúdos profissionais */
-
-.icone-linkedin {
-    color: #0a66c2;
+.taskflow-saudacao { margin-top: 32px; color: var(--cor-texto-secundario); font-size: 14px; line-height: 1.6; }
+.taskflow-boas-vindas h1 { margin: 12px 0 20px; font-size: clamp(36px, 4.5vw, 64px); line-height: 1.08; letter-spacing: -2px; }
+.taskflow-boas-vindas h1 span { color: #b99af8; }
+.taskflow-descricao { max-width: 490px; color: var(--cor-texto-secundario); font-size: 16px; line-height: 1.8; }
+.taskflow-explorar {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    min-height: 48px;
+    margin-top: 28px;
+    padding: 12px 20px;
+    border: 1px solid var(--cor-principal-hover);
+    border-radius: var(--raio-medio);
+    background: var(--cor-principal);
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color .2s;
 }
-
-.icone-carreira {
-    color: var(--cor-sucesso);
+.taskflow-explorar:hover { background: var(--cor-principal-hover); }
+/* Identidade TaskFlow — Visual - reaproveita a imagem central como destaque de recepção */
+.taskflow-identidade { position: relative; min-width: 0; min-height: 300px; display: grid; place-items: center; }
+.taskflow-identidade img { position: relative; width: 100%; max-width: 380px; height: auto; object-fit: contain; }
+.taskflow-anel { position: absolute; width: 80%; max-width: 300px; aspect-ratio: 1; border: 1px solid rgba(139, 92, 246, .35); border-radius: 50%; background: radial-gradient(circle, rgba(124, 58, 237, .14), transparent 70%); }
+.taskflow-anel::before { content: ''; position: absolute; inset: 18px; border: 1px dashed rgba(139, 92, 246, .18); border-radius: inherit; }
+.taskflow-legenda { color: var(--cor-texto-secundario); font-size: 9px; letter-spacing: 2px; text-align: center; line-height: 1.6; }
+/* Áreas e tópicos — Visual - organiza o mapa de estudos em grupos identificáveis */
+.taskflow-areas { max-width: 1200px; margin: 0 auto; scroll-margin-top: 24px; }
+.taskflow-areas-cabecalho { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding-top: 28px; border-top: 1px solid var(--cor-borda); }
+.taskflow-areas-cabecalho h2 { margin-top: 10px; font-size: clamp(24px, 3vw, 32px); letter-spacing: -.7px; }
+.taskflow-areas-cabecalho > p { max-width: 300px; color: var(--cor-texto-secundario); font-size: 12px; line-height: 1.8; }
+.taskflow-mapa { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.area-tecnologia { min-width: 0; padding: 24px; border: 1px solid var(--cor-borda); border-radius: var(--raio-grande); background: linear-gradient(135deg, rgba(124, 58, 237, .06), transparent), var(--cor-superficie); }
+.area-cabecalho { display: flex; align-items: start; gap: 16px; margin-bottom: 20px; }
+.area-numero { color: #b99af8; font-size: 12px; line-height: 28px; }
+.area-cabecalho h3 { font-size: 20px; line-height: 28px; }
+.area-cabecalho p { color: var(--cor-texto-secundario); font-size: 12px; margin-top: 4px; line-height: 1.6; }
+.area-topicos { display: flex; flex-wrap: wrap; gap: 8px; }
+.topico-taskflow { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; max-width: 100%; padding: 10px 12px; border: 1px solid var(--cor-borda); border-radius: var(--raio-pequeno); background: var(--cor-card); color: var(--cor-texto); text-align: left; transition: border-color .2s, background-color .2s; }
+.topico-taskflow:hover { border-color: var(--cor-principal-hover); background: #24202e; }
+.topico-icone { font-size: 19px; color: var(--cor-sucesso); }
+.icone-linkedin { color: #0a66c2; }
+.topico-nome { font-size: 12px; line-height: 1.4; overflow-wrap: anywhere; }
+.taskflow-nota { margin-top: 24px; color: var(--cor-texto-secundario); font-size: 12px; line-height: 1.6; }
+.taskflow-explorar:focus-visible, .topico-taskflow:focus-visible { outline: 2px solid #b99af8; outline-offset: 4px; }
+/* Entrada da recepção — Animação - apresenta a mensagem antes das áreas sem bloquear a interação */
+.taskflow-entrada .taskflow-boas-vindas,
+.taskflow-entrada .taskflow-identidade,
+.taskflow-entrada .taskflow-areas-cabecalho,
+.taskflow-entrada .area-tecnologia,
+.taskflow-entrada .taskflow-nota { animation: entrada-recepcao .55s ease both; }
+.taskflow-entrada .taskflow-identidade { animation-delay: .1s; }
+.taskflow-entrada .taskflow-areas-cabecalho { animation-delay: .18s; }
+.taskflow-entrada .area-tecnologia:nth-child(1) { animation-delay: .25s; }
+.taskflow-entrada .area-tecnologia:nth-child(2) { animation-delay: .32s; }
+.taskflow-entrada .area-tecnologia:nth-child(3) { animation-delay: .39s; }
+.taskflow-entrada .area-tecnologia:nth-child(4) { animation-delay: .46s; }
+.taskflow-entrada .taskflow-nota { animation-delay: .5s; }
+@keyframes entrada-recepcao { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+/* Recepção compacta — Responsividade - adapta o conteúdo sem depender da largura do desktop */
+@media (max-width: 1100px) {
+    .taskflow-apresentacao { gap: 16px; }
+    .taskflow-mapa { grid-template-columns: minmax(0, 1fr); }
+    .taskflow-areas-cabecalho { align-items: start; flex-direction: column; gap: 12px; }
 }
-
-/* Nome da tecnologia */
-.topico-nome {
-    color: var(--cor-texto);
-
-    font-size: 12px;
-    font-weight: 600;
-
-    text-align: center;
+@media (max-width: 768px) {
+    .taskflow-recepcao { padding: 28px 20px; }
+    .taskflow-apresentacao { grid-template-columns: minmax(0, 1fr); padding: 0 0 28px; gap: 20px; }
+    .taskflow-saudacao { margin-top: 24px; }
+    .taskflow-boas-vindas h1 { letter-spacing: -1px; }
+    .taskflow-descricao { font-size: 14px; }
+    .taskflow-identidade { min-height: 0; }
+    .taskflow-identidade img { max-width: 220px; }
+    .taskflow-anel { max-width: 190px; }
+    .area-tecnologia { padding: 20px; }
+    .taskflow-entrada .taskflow-boas-vindas,
+    .taskflow-entrada .taskflow-identidade,
+    .taskflow-entrada .taskflow-areas-cabecalho,
+    .taskflow-entrada .area-tecnologia,
+    .taskflow-entrada .taskflow-nota { animation-duration: .3s; animation-delay: 0s; }
 }
-
-/* ========================================
-   BLOCO 5 — RESPONSIVIDADE MOBILE
-   Responsabilidade: adaptar Home e TaskFlow
-   para smartphones
-======================================== */
-
+/* Movimento reduzido — Acessibilidade - respeita a preferência do dispositivo */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .taskflow-entrada .taskflow-boas-vindas,
+    .taskflow-entrada .taskflow-identidade,
+    .taskflow-entrada .taskflow-areas-cabecalho,
+    .taskflow-entrada .area-tecnologia,
+    .taskflow-entrada .taskflow-nota { animation: none; }
+    .taskflow-explorar, .topico-taskflow { transition: none; }
+}
 @media (max-width: 768px) {
 
     /* ========================================
@@ -694,163 +540,4 @@ a {
     }
 
 
-    /* ========================================
-       TASKFLOW MOBILE
-    ======================================== */
-
-    /* View — Layout - ocupar toda a largura */
-    #view-taskflow {
-        width: 100%;
-        min-height: 100vh;
-    }
-
-
-    /* Ambiente — Layout - adaptar fundo e espaçamento */
-    .taskflow-container {
-        width: 100%;
-        min-height: 100vh;
-
-        padding: 28px 16px;
-
-        overflow: visible;
-
-        background-size: cover;
-        background-position: center top;
-    }
-
-
-    /* ========================================
-       CABEÇALHO TASKFLOW
-    ======================================== */
-
-    /* Cabeçalho — Layout - adaptar largura */
-    .taskflow-cabecalho {
-        width: 100%;
-
-        margin-bottom: 25px;
-
-        text-align: center;
-    }
-
-
-    /* Identificador — Apresentação - reduzir escala */
-    .taskflow-identificador {
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-
-
-    /* Título — Apresentação - adaptar tipografia */
-    .taskflow-cabecalho h1 {
-        margin-bottom: 8px;
-
-        font-size: 25px;
-        line-height: 1.2;
-    }
-
-
-    /* Descrição — Apresentação - melhorar leitura */
-    .taskflow-cabecalho p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-
-    /* ========================================
-       ÁREA DOS TÓPICOS
-    ======================================== */
-
-    /* Órbita — Layout - substituir círculo por grid mobile */
-    .taskflow-orbita {
-        position: relative;
-
-        width: 100%;
-        height: auto;
-
-        aspect-ratio: auto;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
-
-        margin: 0;
-    }
-
-
-    /* Círculos — Apresentação - remover decoração do desktop */
-    .taskflow-orbita::before,
-    .taskflow-orbita::after {
-        display: none;
-    }
-
-
-    /* ========================================
-       IDENTIDADE CENTRAL
-    ======================================== */
-
-    /* Centro — Layout - posicionar identidade acima dos cards */
-    .taskflow-centro {
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        width: 130px;
-        height: 130px;
-
-        grid-column: 1 / -1;
-
-        justify-self: center;
-
-        margin-bottom: 18px;
-
-        transform: none;
-    }
-
-
-    /* Logo — Apresentação - reduzir imagem central */
-    .taskflow-centro img {
-        width: 180px;
-        height: 180px;
-
-        max-width: none;
-
-        object-fit: contain;
-    }
-
-
-    /* ========================================
-       CARDS DOS TÓPICOS
-    ======================================== */
-
-    /* Tópicos — Layout - organizar cards no grid */
-    .topico-taskflow {
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        width: 100%;
-        min-height: 82px;
-
-        opacity: 1;
-
-        padding: 12px;
-
-        transform: none !important;
-    }
-
-
-    /* Ícones — Apresentação - adaptar escala */
-    .topico-icone {
-        font-size: 28px;
-    }
-
-
-    /* Nome — Apresentação - manter legibilidade */
-    .topico-nome {
-        font-size: 12px;
-    }
 }
