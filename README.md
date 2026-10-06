@@ -10,7 +10,7 @@ O CRUD de tarefas, busca, filtros, ordenação, progresso e LocalStorage eram ob
 
 ## Direção futura
 
-Aprender, Praticar, Construir, Carreira e Perfil serão as áreas do DevPath. Elas não foram implementadas nesta migração. Pastas e páginas serão criadas quando houver conteúdo real.
+Aprender, Praticar, Construir, Carreira e Perfil serão as áreas do DevPath. Elas não foram implementadas. As pastas de responsabilidades futuras estão reservadas com `.gitkeep`; páginas e implementações serão criadas somente quando necessárias.
 
 ## Tecnologias
 
@@ -21,26 +21,41 @@ HTML5, CSS3 e JavaScript ES6+. Devicon e Font Awesome continuam carregados por C
 ```text
 TaskFlow-DevClub/
 ├── index.html
+├── pages/                 # .gitkeep
 ├── css/
-│   └── global/
-│       └── style.css
+│   ├── global/
+│   │   └── style.css
+│   ├── components/        # .gitkeep
+│   └── pages/             # .gitkeep
 ├── js/
-│   └── core/
-│       └── app.js
+│   ├── core/
+│   │   └── app.js
+│   ├── modules/           # .gitkeep
+│   ├── services/          # .gitkeep
+│   └── utils/             # .gitkeep
 ├── assets/
-│   └── images/
-│       ├── cabeçalhotask.png
-│       ├── devLogo.png
-│       ├── Fundo.png
-│       ├── principal-home.png
-│       └── TaskCentro.png
+│   ├── images/
+│   │   ├── cabeçalhotask.png
+│   │   ├── devLogo.png
+│   │   ├── Fundo.png
+│   │   ├── principal-home.png
+│   │   └── TaskCentro.png
+│   ├── icons/             # .gitkeep
+│   └── fonts/             # .gitkeep
+├── data/                  # .gitkeep
+├── docs/
+│   └── arquitetura.md
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml
+├── AGENTS.md
+├── .gitignore
 └── README.md
 ```
 
 O nome do diretório do repositório foi mantido. O CSS permanece inteiro em um arquivo global e o JavaScript de inicialização e navegação em js/core/app.js. Todas as imagens foram preservadas, incluindo a imagem sem referência atual na interface.
+
+As responsabilidades e referências estão detalhadas em [docs/arquitetura.md](docs/arquitetura.md).
 
 ## Execução e teste manual
 
