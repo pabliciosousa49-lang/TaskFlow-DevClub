@@ -139,7 +139,7 @@ function criarItemCompromisso(compromisso, permitirEdicao) {
     item.append(titulo, horario);
     if (permitirEdicao && compromisso.descricao) {
         const descricao = document.createElement("p");
-        descricao.textContent = compromisso.descricao;
+        descricao.textContent = compromisso.descricao.length > 160 ? `${compromisso.descricao.slice(0, 160)}…` : compromisso.descricao;
         item.append(descricao);
     }
     if (permitirEdicao) {
@@ -208,12 +208,13 @@ function atualizarProximosEventos() {
 function atualizarAgenda() {
     atualizarCalendario();
     document.querySelector("#agenda-data-selecionada").textContent = apresentarData(dataSelecionada);
-    preencherLista(listaCompromissos, ordenarCompromissos(compromissos.filter(compromisso => compromisso.data === dataSelecionada)), "Nenhum compromisso nesta data.", true);
+    preencherLista(listaCompromissos, ordenarCompromissos(compromissos), "Nenhum compromisso cadastrado.", true);
     atualizarProximosEventos();
 }
 
-// Formulário da agenda — Atualização - limpa a edição e usa a data selecionada
+// Formulário da agenda — Atualização - encerra a edição, oculta o formulário e mantém a data selecionada
 function cancelarEdicao() {
+    formularioCompromisso.hidden = true;
     idEmEdicao = null;
     formularioCompromisso.reset();
     campoTitulo.setCustomValidity("");
@@ -221,6 +222,15 @@ function cancelarEdicao() {
     campoHora.setCustomValidity("");
     campoData.value = dataSelecionada;
     document.querySelector("#titulo-formulario").textContent = "Novo compromisso";
+}
+// Acesso ao formulário — Atualização - torna os campos visíveis e acessíveis após seleção ou edição
+function mostrarFormulario() {
+    formularioCompromisso.hidden = false;
+    campoTitulo.focus();
+    formularioCompromisso.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+        block: "nearest"
+    });
 }
 function abrirAgenda(evento) {
     if (painelAgenda.open) return;
@@ -251,7 +261,10 @@ painelAgenda.addEventListener("close", () => {
     painelAgenda.classList.remove("agenda-fechando");
     if (acessoAgenda) acessoAgenda.focus();
 });
-document.querySelector("#cancelar-compromisso").addEventListener("click", cancelarEdicao);
+document.querySelector("#cancelar-compromisso").addEventListener("click", () => {
+    cancelarEdicao();
+    document.querySelector("#titulo-compromissos").focus();
+});
 
 // Navegação do calendário — Escuta - muda o mês sem alterar compromissos ou abrir outras páginas
 function mudarMes(deslocamento) {
@@ -269,7 +282,7 @@ diasAgenda.addEventListener("click", evento => {
     dataSelecionada = botao.dataset.data;
     cancelarEdicao();
     atualizarAgenda();
-    diasAgenda.querySelector(`[data-data="${dataSelecionada}"]`).focus();
+    mostrarFormulario();
 });
 
 // Cadastro e edição — Escuta - valida campos e salva somente após confirmar a gravação
@@ -292,6 +305,7 @@ formularioCompromisso.addEventListener("submit", evento => {
     cancelarEdicao();
     atualizarAgenda();
     avisoAgenda.textContent = "Compromisso salvo.";
+    document.querySelector("#titulo-compromissos").focus();
 });
 
 // Ações do compromisso — Escuta - preenche edição e confirma exclusões antes de persistir
@@ -308,14 +322,13 @@ listaCompromissos.addEventListener("click", evento => {
         campoData.value = compromisso.data;
         campoHora.value = compromisso.hora;
         document.querySelector("#titulo-formulario").textContent = "Editar compromisso";
-        campoTitulo.focus();
+        mostrarFormulario();
     } else if (window.confirm(`Excluir o compromisso "${compromisso.titulo}"?`)) {
         if (!salvarCompromissos(compromissos.filter(atual => atual.id !== compromisso.id))) return;
         if (idEmEdicao === compromisso.id) cancelarEdicao();
         atualizarAgenda();
         avisoAgenda.textContent = "Compromisso excluído.";
-        document.querySelector("#agenda-data-selecionada").setAttribute("tabindex", "-1");
-        document.querySelector("#agenda-data-selecionada").focus();
+        document.querySelector("#titulo-compromissos").focus();
     }
 });
 

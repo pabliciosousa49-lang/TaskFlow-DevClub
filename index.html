@@ -345,10 +345,14 @@
         <div id="agenda-dias" class="agenda-dias"></div>
         <p class="agenda-legenda">● Dia com compromisso · Borda verde: hoje</p>
         <h3 id="agenda-data-selecionada"></h3>
+      </section>
+      <!-- Compromissos marcados — Estrutura - mantém todos os registros visíveis ao abrir a agenda -->
+      <section class="agenda-registros" aria-labelledby="titulo-compromissos">
+        <h3 id="titulo-compromissos" tabindex="-1">Compromissos marcados</h3>
         <ul id="lista-compromissos" class="agenda-lista"></ul>
       </section>
-      <!-- Formulário — Estrutura - cadastra e edita os dados de um compromisso -->
-      <form id="formulario-compromisso" class="agenda-formulario">
+      <!-- Formulário — Estrutura - aparece somente após selecionar uma data ou editar um registro -->
+      <form id="formulario-compromisso" class="agenda-formulario" hidden>
         <h3 id="titulo-formulario">Novo compromisso</h3>
         <label for="compromisso-titulo">Título (obrigatório)</label>
         <input id="compromisso-titulo" name="titulo" type="text" required maxlength="120">

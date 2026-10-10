@@ -583,7 +583,7 @@ a {
 .agenda-barra { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .agenda-painel .taskflow-identificador { font-size: 12px; }
 .agenda-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 28px; margin-top: 16px; }
-.agenda-calendario, .agenda-formulario { min-width: 0; }
+.agenda-calendario, .agenda-registros, .agenda-formulario { min-width: 0; }
 .agenda-calendario h3 { font-size: 16px; }
 .agenda-semana, .agenda-dias { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
 .agenda-semana { margin: 16px 0 8px; text-align: center; font-size: 12px; color: var(--cor-texto-secundario); }
@@ -597,7 +597,8 @@ a {
 .agenda-compromisso p { margin-top: 6px; white-space: pre-wrap; line-height: 1.5; font-size: 13px; color: var(--cor-texto-secundario); }
 .agenda-compromisso time { display: block; margin-top: 6px; font-size: 13px; color: #b99af8; }
 .agenda-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.agenda-formulario { display: flex; flex-direction: column; gap: 8px; }
+.agenda-formulario { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; padding-top: 20px; border-top: 1px solid var(--cor-borda); }
+.agenda-formulario[hidden] { display: none; }
 .agenda-formulario label { font-size: 13px; margin-top: 8px; }
 .agenda-formulario input, .agenda-formulario textarea { width: 100%; min-width: 0; padding: 10px; min-height: 44px; border: 1px solid var(--cor-borda); border-radius: var(--raio-pequeno); background: var(--cor-fundo); color: var(--cor-texto); color-scheme: dark; }
 .agenda-formulario textarea { resize: vertical; }
