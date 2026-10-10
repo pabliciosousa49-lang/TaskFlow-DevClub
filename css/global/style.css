@@ -708,9 +708,9 @@ a {
 
     .taskflow-identidade {
         position: absolute;
-        right: -26px;
-        bottom: 355px;
-        width: 130px;
+        right: -15px;
+        bottom: 10px;
+        width: 100px;
         min-height: 0;
     }
 
